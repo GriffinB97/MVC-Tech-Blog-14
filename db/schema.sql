@@ -1,8 +1,8 @@
 -- Create the database
-CREATE DATABASE your_db_name;
+CREATE DATABASE blog_db;
 
 -- Connect to the database
-\c your_db_name;
+\c blog_db;
 
 -- Create users table
 CREATE TABLE users (
