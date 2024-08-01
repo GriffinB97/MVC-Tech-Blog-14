@@ -2,7 +2,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers/api');  // Updated path
+const routes = require('./controllers/api');  // Correct path
 const helpers = require('./utils/auth');
 
 const sequelize = require('./config/connection');
@@ -41,5 +41,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Now listening on PORT', PORT));
+  app.listen(PORT, () => console.log(`Now listening on PORT ${PORT}`));
 });
