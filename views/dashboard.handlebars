@@ -1,0 +1,15 @@
+<h1>Dashboard</h1>
+<a href="/post/new">Create New Post</a>
+<h2>My Posts</h2>
+{{#if posts.length}}
+  <ul class="post-list">
+    {{#each posts}}
+      <li>
+        <a href="/post/{{this.id}}">{{this.title}}</a>
+        <button data-id="{{this.id}}">Delete</button>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No posts yet!</p>
+{{/if}}
